@@ -2,17 +2,17 @@ import { Icon } from "../components/Icon"
 
 export const Navbar = () => {
     return (
-        <nav className="bg-white border-gray-200 sticky top-0 dark:bg-gray-900">
+        <nav className="sticky top-0 right-0 z-10 bg-gray-900">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     {/* TODO: change icon */}
                     <Icon name="person" size={32} color="var(--text-clr)" />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Mucho Store</span>
+                    <span className="text-white self-center text-2xl font-semibold whitespace-nowrap">Mucho Store</span>
                 </a>
                 <div class="gap-x-6 flex items-center md:order-2 xl:gap-x-8">
                     {/* button menu change for bottom menu cart*/}
                     <Icon name="home" size={30} color="var(--text-clr)" notification={true} onClick={() => console.log("hello from shopping cart")} />
-                    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">login</button>
+                    <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">login</button>
                 </div>
 
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">

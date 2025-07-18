@@ -1,4 +1,4 @@
-export function Icon({ name, size = 24, color = 'currentColor', notification = false, ariaLabel = "", onClick }) {
+export const Icon = ({ name, size = 24, color = 'currentColor', notification = false, ariaLabel = "", onClick }) => {
     return (
         <div className="relative">
             <svg
