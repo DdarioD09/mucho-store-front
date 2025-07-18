@@ -67,7 +67,7 @@ const products = [
     },
 ];
 
-export const ProductList = () => {
+export const ProductList = ({category}) => {
     const [cartItems, setCartItems] = useState({});
 
     function handleCart(productId) {
