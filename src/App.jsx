@@ -1,5 +1,13 @@
+import { Navbar } from "./components/Navbar";
+import { ProductList } from "./components/ProductList";
+
 function App() {
-  return <h1>This is the mucho store app</h1>
+  return (
+    <>
+      <Navbar />
+      <ProductList />
+    </>
+  );
 }
 
 export default App
