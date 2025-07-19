@@ -1,16 +1,21 @@
 import { Icon } from "../components/Icon"
 
-export const Navbar = () => {
+export const Navbar = ({ onClickLogin }) => {
     return (
         <nav className="sticky top-0 right-0 z-10 bg-gray-900">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <Icon name="store-icon" size={32} color="var(--text-clr)" />
                     <span className="text-white self-center text-2xl font-semibold whitespace-nowrap">Mucho Store</span>
                 </a>
                 <div className="gap-x-6 flex items-center md:order-2 xl:gap-x-8">
                     <Icon name="shopping-cart" size={30} color="var(--text-clr)" notification={true} onClick={() => console.log("hello from shopping cart")} />
-                    <button className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center cursor-pointer">login</button>
+                    <button
+                        className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-4 py-2 text-center cursor-pointer"
+                        onClick={onClickLogin}
+                    >
+                        login
+                    </button>
                 </div>
 
                 <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
