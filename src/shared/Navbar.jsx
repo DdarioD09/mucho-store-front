@@ -5,13 +5,11 @@ export const Navbar = () => {
         <nav className="sticky top-0 right-0 z-10 bg-gray-900">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    {/* TODO: change icon */}
-                    <Icon name="person" size={32} color="var(--text-clr)" />
+                    <Icon name="store-icon" size={32} color="var(--text-clr)" />
                     <span className="text-white self-center text-2xl font-semibold whitespace-nowrap">Mucho Store</span>
                 </a>
                 <div className="gap-x-6 flex items-center md:order-2 xl:gap-x-8">
-                    {/* button menu change for bottom menu cart*/}
-                    <Icon name="home" size={30} color="var(--text-clr)" notification={true} onClick={() => console.log("hello from shopping cart")} />
+                    <Icon name="shopping-cart" size={30} color="var(--text-clr)" notification={true} onClick={() => console.log("hello from shopping cart")} />
                     <button className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center cursor-pointer">login</button>
                 </div>
 

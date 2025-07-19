@@ -8,7 +8,7 @@ export const ProductSection = () => {
     return (
         <>
             <Category category={category} onClickCategory={setCategory} />
-            <ProductList />
+            <ProductList category={category} />
         </>
     );
 }
