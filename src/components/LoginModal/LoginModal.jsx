@@ -5,36 +5,16 @@ export const LoginModal = ({ onCloseModal }) => {
     // const [currentState, setCurrentState] = useState('Sign Up');
     const [currentState, setCurrentState] = useState('Login');
     return (
-        <div className="absolute z-20 w-dvw h-dvh bg-black/30 grid place-items-center">
-            <form className="
-    self-center
-    w-[max(23vw,330px)]
-    text-gray-700
-    bg-white
-    flex flex-col gap-6
-    px-6 py-8
-    rounded-lg
-    text-sm
-    animate-fadeIn
-    shadow-xl
-  ">
+        <div className="fixed z-20 w-dvw h-dvh bg-black/30 grid place-items-center">
+            <form className="self-center w-[max(23vw,330px)] text-gray-700 bg-white flex flex-col gap-6 px-6 py-8 rounded-lg text-sm animate-fadeIn shadow-xl">
                 {/* Title */}
                 <div className="flex justify-between items-center">
                     <h2 className="text-2xl font-bold text-gray-800">{currentState}</h2>
                     <button
-                        type="button"
-                        onClick={onCloseModal}
-                        className="
-          w-6 h-6
-          flex items-center justify-center
-          text-gray-500 hover:text-gray-700
-          transition-colors
-        "
+                        type="button" onClick={onCloseModal}
+                        className="w-6 h-6 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors cursor-pointer"
                     >
-                        <img
-                            src={assets.cross_icon}
-                            alt={`Close ${currentState} modal`}
-                            className="w-4 h-4"
+                        <img src={assets.cross_icon} alt={`Close ${currentState} modal`} className="w-4 h-4"
                         />
                     </button>
                 </div>
@@ -43,27 +23,13 @@ export const LoginModal = ({ onCloseModal }) => {
                 <div className="flex flex-col gap-4">
                     {currentState === 'Sign Up' && (
                         <input
-                            type="text"
-                            placeholder="Your name"
-                            required
-                            className="
-            w-full p-3
-            border border-gray-300 rounded
-            focus:outline-none focus:ring-2 focus:ring-blue-500
-            transition-all
-          "
+                            type="text" placeholder="Your name" required
+                            className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                         />
                     )}
                     <input
-                        type="email"
-                        placeholder="Your email"
-                        required
-                        className="
-          w-full p-3
-          border border-gray-300 rounded
-          focus:outline-none focus:ring-2 focus:ring-blue-500
-          transition-all
-        "
+                        type="email" placeholder="Your email" required
+                        className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                     />
                     <input
                         type="password"

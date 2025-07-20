@@ -7,7 +7,7 @@ export const Category = ({ category, onClickCategory }) => {
     }
 
     return (
-        <div className="flex flex-col gap-5" id='explore-category'>
+        <div id='product-category' className="flex flex-col gap-5 scroll-mt-20">
             <h1 className="text-2xl font-medium">Explore our products</h1>
             <p className="max-w-4/5 text-gray-700">Choose from a diverse menu featuring a delectable array of dishes. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.</p>
             <div className="

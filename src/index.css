@@ -8,3 +8,7 @@
     --accent-clr: #5e63ff;
     --secondary-text-clr: #b0b3c1;
 }
+
+html {
+    scroll-behavior: smooth;
+}
