@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Home } from "./pages/home/Home";
 import { Navbar } from "./shared/Navbar";
 import { LoginModal } from "./components/LoginModal/LoginModal";
+import { Route, Routes } from "react-router-dom";
+import { Cart } from "./pages/Cart/Cart";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -18,7 +20,10 @@ function App() {
     <>
       {showLogin && <LoginModal onCloseModal={closeLoginModal} />}
       <Navbar onClickLogin={openLoginModal} />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </>
   );
 }
