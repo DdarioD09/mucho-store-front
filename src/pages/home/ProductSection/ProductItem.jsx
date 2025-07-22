@@ -1,7 +1,8 @@
 import { useContext } from "react"
 
 import { StoreContext } from "../../../context/StoreContext";
-import { StockCounterButton } from "../../../components/StockCounterButton";
+import { IconButton } from "../../../components/button/IconButton";
+import { StockCounterPill } from "../../../components/StockCounterPill";
 
 export const ProductItem = ({ id, name, description, image, price }) => {
     const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
@@ -11,12 +12,13 @@ export const ProductItem = ({ id, name, description, image, price }) => {
             <div className="relative">
                 <img className="w-full" src={image} alt={`image ${name}`} />
                 {!cartItems[id]
-                    ? <StockCounterButton iconName='add' className="absolute bottom-3 right-3 bg-gray-50" onCounterClick={() => addToCart(id)} />
-                    : <div className="absolute bottom-3 right-3 flex items-center gap-2 bg-gray-50 rounded-full">
-                        <StockCounterButton iconName='remove' iconColor="white" className="bg-red-500" onCounterClick={() => removeFromCart(id)} />
-                        <span>{cartItems[id]}</span>
-                        <StockCounterButton iconName='add' iconColor="white" className="bg-green-500" onCounterClick={() => addToCart(id)} />
-                    </div>
+                    ? <IconButton iconName='add' className="absolute bottom-3 right-3 bg-gray-50 size-12" onClick={() => addToCart(id)} />
+                    : <StockCounterPill
+                        className="absolute bottom-3 right-3"
+                        text={cartItems[id]}
+                        onAddClick={() => addToCart(id)}
+                        onRemoveClick={() => removeFromCart(id)}
+                    />
                 }
             </div>
             <div className="p-5">
